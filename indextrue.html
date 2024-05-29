@@ -1,0 +1,405 @@
+<?php
+session_start();
+include("connect.php");
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/23cecef777.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="#">
+                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="Spotify Logo">
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="indextrue.html">
+                        <span class="fa fa-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="music.html">
+                        <span class="fa fa-search"></span>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="playlist.html">
+                        <span class="fas fa-book"></span>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="music.html">
+                        <span class="fas fa-plus-square"></span>
+                        <span>Create Playlist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fas fa-heart"></span>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="policies">
+            <ul>
+                <li><a href="https://www.spotify.com/ph-en/legal/cookies-policy/" target="_blank">Cookies</a></li>
+                <li><a href="https://www.spotify.com/ph-en/legal/privacy-policy/" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <button type="button" class="fas fa-chevron-left"></button>
+                <button type="button" class="fas fa-chevron-right"></button>
+            </div>
+            <nav class="navbar">
+               <a href="logout.php"> <button type="button" id="signOutButton">Sign Out</button></a>
+            </nav>
+        </div>
+      
+
+        <section class="spotify-playlists">
+            <h2>Made for you</h2>
+            <div class="list">
+                <div class="item" id="album1">
+                    <img src="Albumpics/dm1.png" alt="Today's Top Hits">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Daily Mix 1</h4>
+                    <p>Drake, Chris Brown,Deorro and more...</p>
+                </div>
+
+                <div class="item" id="album2">
+                    <img src="Albumpics/dm2.png" alt="RapCaviar">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+
+                    <h4>Daily Mix 2</h4>
+                    <p>One Direction, 5 Seconds of Summer, Adele and...</p>
+                </div>
+                <div class="item" id="album3">
+                    <img src="Albumpics/dm3.png" alt="All out 2010s">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Daily Mix 3</h4>
+                    <p>BTS, The Rose, PSYCHIC FEVER from EXILE TRIB...</p>
+                </div>
+                <div class="item" id="album4">
+                    <img src="Albumpics/dm4.png" alt="Rock Classics">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Daily Mix 4</h4>
+                    <p>87dance, Solji, Baek Ji Young and more</p>
+                </div>
+                <div class="item" id="album5">
+                    <img src="Albumpics/dm5.png" alt="Chill Hits">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Daily Mix 5</h4>
+                    <p>keshi, omarion uchiwa, Jeff Bern...</p>
+                </div>
+                <div class="item" id="album6">
+                    <img src="Albumpics/dm6.png" alt="Viva Latino">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Daily Mix 6</h4>
+                    <p>Chase Atlantic,RINI,UMI and more</p>
+                </div>
+                <div class="item" id="album7">
+                    <img src="Albumpics/dj.png" alt="Mega Hit Mix">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>R&B Mix</h4>
+                    <p>Jimmy Brown, Kehlani, Daniel Caesar and more</p>
+                </div>
+                <div class="item" id="album8">
+                    <img src="Albumpics/discoverweekly.png" alt="All out 80s">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Discover Weekly</h4>
+                    <p>Your weekly mixtape of fresh music, Enjoy new...</p>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="spotify-playlists">
+            <h2>Best of artists</h2>
+            <div class="list">
+                <div class="item" id="album9">
+                    <img src="Albumpics/b1.png" alt="Peaceful Piano">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This Is keshi</h4>
+                    <p>This is keshi.  The essential tracks,all in one playlist.</p>
+                </div>
+                <div class="item" id="album10">
+                    <img src="Albumpics/b2.png" alt="Deep Focus">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This Is wave to earth</h4>
+                    <p>This Is wave to earth. The essential tracks, all in one playlist</p>
+                </div>
+                <div class="item" id="album11">
+                    <img src="Albumpics/b3.png" alt="Instrumental Study">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This is The Rose</h4>
+                    <p>This Is The Rose. The essential tracks, all in one playlist</p>
+                </div>
+                <div class="item" id="album12">
+                    <img src="Albumpics/b4.png" alt="chill lofi study beats">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This Is Chase Atlantic</h4>
+                    <p>This Is Chase Atlantic. The essential tracks, all in one playlist</p>
+                </div>
+                <div class="item" id="album13">
+                    <img src="Albumpics/b5.png" alt="Coding Mode">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This Is ENHYPEN</h4>
+                    <p>(-) "Connection, Discovery, & Growth"</p>
+                </div>
+                <div class="item" id="album14">
+                    <img src="Albumpics/b6.png" alt="Focus Flow">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This Is BTS</h4>
+                    <p>Welcome to the BTS's universe. A.R.M.Y is...</p>
+                </div>
+                <div class="item" id="album15">
+                    <img src="Albumpics/b7.png" alt="Calm Before The Storm">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This is TOMORRO...</h4>
+                    <p>ONE DREAM with TXT!</p>
+                </div>
+                <div class="item" id="album16">
+                    <img src="Albumpics/b8.png" alt="Beats to think to">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>This Is NewJeans</h4>
+                    <p>This Is NewJeans. The essential tracks, all in one playlist</p>
+                </div>
+            </div>
+        </section>
+
+
+   
+        
+        <section class="spotify-playlists">
+            <h2>Editor's Picks</h2>
+            <div class="list">
+                <div class="item" id="album17">
+                    <img src="Albumpics/e1.png" alt="Mood Booster">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Hot Hits Philippines</h4>
+                    <p>Best tracks from the world of OPM and pop.....</p>
+                </div>
+                <div class="item" id="album18">
+                    <img src="Albumpics/e2.png" alt="Feelin' Good">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>RADAR Philippines</h4>
+                    <p>Discover new artists on the horizon this 2024...</p>
+                </div>
+                <div class="item" id="album19">
+                    <img src="Albumpics/e3.png" alt="Dark & Stormy">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Tatak Pinoy</h4>
+                    <p>Mga nangunguna sa mundo ng OPM.Cover...</p>
+                </div>
+                <div class="item" id="album20">
+                    <img src="Albumpics/e4.png" alt="Feel Good Piano">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Viral Hits Philippines</h4>
+                    <p>Viral sa Pinas! Cover: Sabrina Carpenter.</p>
+                </div>
+                <div class="item" id="album21">
+                    <img src="Albumpics/e5.png" alt="Feelin' Myself">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Kalye Hip-Hop</h4>
+                    <p>The place for the very best of Pinoy hip-hop....</p>
+                </div>
+                <div class="item" id="album22">
+                    <img src="Albumpics/e6.png" alt="Chill Tracks">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Kilig Pa More</h4>
+                    <p>yiheeeeeee</p>
+                </div>
+                <div class="item" id="album23">
+                    <img src="Albumpics/e7.png" alt="Feel-Good Indie Rock">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Relax Tayo</h4>
+                    <p>Sit back and relax to our favorite local indie and...</p>
+                </div>
+                <div class="item" id="album24">
+                    <img src="Albumpics/e8.png" alt="idk">
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Disney Hits...</h4>
+                    <p>All of your favorite Disney hits.</p>
+                </div>
+            </div>
+            <hr>
+        </section>
+      
+        
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+    document.getElementById('signOutButton').onclick = function() {
+        window.location.href = 'indexlogin.html'; 
+    };
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('album1').addEventListener('click', function() {
+                window.location.href = 'album1.html';
+            });
+
+            document.getElementById('album2').addEventListener('click', function() {
+                window.location.href = 'album2.html';
+            });
+
+            document.getElementById('album3').addEventListener('click', function() {
+                window.location.href = 'album3.html';
+            });
+
+            document.getElementById('album4').addEventListener('click', function() {
+                window.location.href = 'album4.html';
+            });
+
+            document.getElementById('album5').addEventListener('click', function() {
+                window.location.href = 'album5.html';
+            });
+
+            document.getElementById('album6').addEventListener('click', function() {
+                window.location.href = 'album6.html';
+            });
+
+            document.getElementById('album7').addEventListener('click', function() {
+                window.location.href = 'album7.html';
+            });
+
+            document.getElementById('album8').addEventListener('click', function() {
+                window.location.href = 'album8.html';
+            });
+
+            document.getElementById('album9').addEventListener('click', function() {
+                window.location.href = 'album9.html';
+            });
+
+            document.getElementById('album10').addEventListener('click', function() {
+                window.location.href = 'album10.html';
+            });
+
+            document.getElementById('album11').addEventListener('click', function() {
+                window.location.href = 'album11.html';
+            });
+
+            document.getElementById('album12').addEventListener('click', function() {
+                window.location.href = 'album12.html';
+            });
+
+            document.getElementById('album13').addEventListener('click', function() {
+                window.location.href = 'album13.html';
+            });
+
+            document.getElementById('album14').addEventListener('click', function() {
+                window.location.href = 'album14.html';
+            });
+
+            document.getElementById('album15').addEventListener('click', function() {
+                window.location.href = 'album15.html';
+            });
+
+            document.getElementById('album16').addEventListener('click', function() {
+                window.location.href = 'album16.html';
+            });
+
+            document.getElementById('album17').addEventListener('click', function() {
+                window.location.href = 'album17.html';
+            });
+
+            document.getElementById('album18').addEventListener('click', function() {
+                window.location.href = 'album18.html';
+            });
+
+            document.getElementById('album19').addEventListener('click', function() {
+                window.location.href = 'album19.html';
+            });
+
+            document.getElementById('album20').addEventListener('click', function() {
+                window.location.href = 'album20.html';
+            });
+
+            document.getElementById('album21').addEventListener('click', function() {
+                window.location.href = 'album21.html';
+            });
+
+            document.getElementById('album22').addEventListener('click', function() {
+                window.location.href = 'album22.html';
+            });
+
+            document.getElementById('album23').addEventListener('click', function() {
+                window.location.href = 'album23.html';
+            });
+
+            document.getElementById('album24').addEventListener('click', function() {
+                window.location.href = 'album24.html';
+            });
+
+        });
+</script>

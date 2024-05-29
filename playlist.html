@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="playlist.css">
+
+</head>
+<body>
+    <div class="playlist-container">
+        <button class="back-button" onclick="history.back()">Back</button>
+        <button id="clearPlaylist" class="clear-button">Clear</button> 
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Length</th>
+                </tr>
+            </thead>
+            <tbody id="playlist">
+           
+            </tbody>
+        </table>
+    </div>
+    <script src="playlist.js"></script>
+</body>
+</html>

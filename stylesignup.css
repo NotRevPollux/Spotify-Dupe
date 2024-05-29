@@ -1,0 +1,73 @@
+* {
+    font-family: Montserrat;
+    color: #fff;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(24, 110, 43, 0.8) 57%, rgb(9, 77, 57) 100%);
+}
+
+body {
+    overflow-x: hidden;
+}
+s
+.main-section {
+    margin: 30px auto;
+    height: 90vh;
+}
+
+.form-section {
+    background: rgb(38, 50, 56);
+    background: linear-gradient(90deg, rgba(38, 50, 56, 1) 0%, rgba(38, 50, 64, 1) 50%, rgba(38, 50, 66, 1) 100%);
+}
+
+.form-container {
+    margin: 70px 45px;
+}
+
+.heading__h2 {
+    font-weight: 700;
+}
+
+.heading__h3 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.links__p {
+    font-size: 1.2em;
+}
+
+.links__p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+label {
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.07em;
+}
+
+input[type=text], input[type=password] {
+    border: none;
+    margin: auto auto 24px auto;
+    min-width: 100%;
+    background: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.button {
+    border-radius: 16px;
+    padding: 4px 12px;
+    background: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0;
+    border: 0;
+    color: #41A5DD;
+}
